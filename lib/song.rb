@@ -13,11 +13,11 @@ class Song
     @genre = genre
     @@count +=1
     @@genres << genre
-    @@artists << artist 
+    @@artists << artist
   end
 
   # a class method returns the total number of songs created
-  def self.count 
+  def self.count
     @@count
   end
 
@@ -31,11 +31,12 @@ class Song
     genre_count = {}
     @@genres.each do |genre|
       genre_count[genre] ? +=1 : 1
+    end
   end
 
-  # a class method that returns an array of all of the artists of the existing songs 
-  def self.artists 
+  # a class method that returns an array of all of the artists of the existing songs
+  def self.artists
     @@artists.uniq
   end
-  
+
 end
